@@ -52,7 +52,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
         });
 
         jLabel4.setIcon(new javax.swing.ImageIcon("./img/c6039f55f3ac67bf863bb7740480cb58 (6).jpg")); // NOI18N
-        jLabel4.setText("÷");
+        jLabel4.setText(" "+Character.toString((char)(247))+" ");
         jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel4MouseClicked(evt);
@@ -69,7 +69,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
         });
 
         jLabel6.setIcon(new javax.swing.ImageIcon("./img/c6039f55f3ac67bf863bb7740480cb58 (3).jpg")); // NOI18N
-        jLabel6.setText("%");
+        jLabel6.setText("% ");
         jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel6MouseClicked(evt);
@@ -77,7 +77,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
         });
 
         jLabel7.setIcon(new javax.swing.ImageIcon("./img/c6039f55f3ac67bf863bb7740480cb58 (10).jpg")); // NOI18N
-        jLabel7.setText("x");
+        jLabel7.setText(" x ");
         jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel7MouseClicked(evt);
@@ -133,7 +133,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
         });
 
         jLabel14.setIcon(new javax.swing.ImageIcon("./img/c6039f55f3ac67bf863bb7740480cb58 (11).jpg")); // NOI18N
-        jLabel14.setText("−");
+        jLabel14.setText(" "+Character.toString((char)150));
         jLabel14.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel14MouseClicked(evt);
@@ -165,7 +165,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
         });
 
         jLabel18.setIcon(new javax.swing.ImageIcon("./img/c6039f55f3ac67bf863bb7740480cb58 (17).jpg")); // NOI18N
-        jLabel18.setText("+");
+        jLabel18.setText(" + ");
         jLabel18.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel18MouseClicked(evt);
@@ -442,7 +442,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
         }
         else{
             String typed = jTextField1.getText();
-            jTextField1.setText((typed.substring(0, typed.length()-1)).concat("+"));
+            jTextField1.setText((typed.substring(0, typed.length()-2)).concat(" + "));
         }
     }//GEN-LAST:event_jLabel18MouseClicked
 
@@ -460,7 +460,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
         }
         else{
             String typed = jTextField1.getText();
-            jTextField1.setText((typed.substring(0, typed.length()-1)).concat("−"));
+            jTextField1.setText((typed.substring(0, typed.length()-2)).concat(" "+Character.toString((char)150)+" "));
         }
     }//GEN-LAST:event_jLabel14MouseClicked
 
@@ -478,7 +478,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
         }
         else{
             String typed = jTextField1.getText();
-            jTextField1.setText((typed.substring(0, typed.length()-1)).concat("x"));
+            jTextField1.setText((typed.substring(0, typed.length()-2)).concat(" x "));
         }
     }//GEN-LAST:event_jLabel7MouseClicked
 
@@ -496,7 +496,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
         }
         else{
             String typed = jTextField1.getText();
-            jTextField1.setText((typed.substring(0, typed.length()-1)).concat("÷"));
+            jTextField1.setText((typed.substring(0, typed.length()-2)).concat(" "+Character.toString((char)247)+" "));
         }
     }//GEN-LAST:event_jLabel4MouseClicked
     private double ans=0.0;private int swclear=0;
@@ -506,7 +506,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
         swclear=1;
         char ch=fs.charAt(fs.length()-1);
 		String cs2=Character.toString(ch);
-        if(cs2.equalsIgnoreCase("÷")||cs2.equalsIgnoreCase("x")||cs2.equalsIgnoreCase("+")||cs2.equalsIgnoreCase("−")){
+        if(cs2.equalsIgnoreCase(Character.toString((char)247))||cs2.equalsIgnoreCase("x")||cs2.equalsIgnoreCase("+")||cs2.equalsIgnoreCase(Character.toString((char)150))){
             fs=fs.substring(0,fs.length()-1);
             jTextField1.setText("fs");
         }
@@ -528,7 +528,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
         for(int i=0;i<fs.length();i++){
         char c=fs.charAt(i);
 		String cs=Character.toString(c);
-        if(cs.equalsIgnoreCase("÷")){
+        if(cs.equalsIgnoreCase(Character.toString((char)(247)))){
             int lindex=findex(fs.substring(0,i))+(fposition(fs.substring(0,i))).length()+(lposition(fs.substring(i+1))).length()+1;
             ans=Double.valueOf(fposition(fs.substring(0,i)))/Double.valueOf(lposition(fs.substring(i+1)));
             System.out.println(String.format("%,.4f", ans));
@@ -561,7 +561,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
           for(int i=0;i<fs.length();i++){
         char c=fs.charAt(i);
 		String cs=Character.toString(c);
-         if(cs.equalsIgnoreCase("−")){
+         if(cs.equalsIgnoreCase(Character.toString((char)150))){
             int lindex=findex(fs.substring(0,i))+(fposition(fs.substring(0,i))).length()+(lposition(fs.substring(i+1))).length()+1;
             ans=Double.valueOf(fposition(fs.substring(0,i)))-Double.valueOf(lposition(fs.substring(i+1)));
             System.out.println(String.format("%,.4f", ans));
@@ -599,7 +599,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
         for(int i=s.length()-1;i>=0;i--){
             char c=s.charAt(i);
 			String cs=Character.toString(c);
-            if((!cs.equalsIgnoreCase("÷"))&&(!cs.equalsIgnoreCase("x"))&&(!cs.equalsIgnoreCase("+"))&&(!cs.equalsIgnoreCase("−"))){
+            if((!cs.equalsIgnoreCase(Character.toString((char)(247))))&&(!cs.equalsIgnoreCase("x"))&&(!cs.equalsIgnoreCase("+"))&&(!cs.equalsIgnoreCase(Character.toString((char)150)))){
                 sub=c+sub;
             }
             else
@@ -615,7 +615,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
         for(int i=0;i<s.length();i++){
             char c=s.charAt(i);
 			String cs=Character.toString(c);
-            if((!cs.equalsIgnoreCase("÷"))&&(!cs.equalsIgnoreCase("x"))&&(!cs.equalsIgnoreCase("+"))&&(!cs.equalsIgnoreCase("−"))){
+            if((!cs.equalsIgnoreCase(Character.toString((char)(247))))&&(!cs.equalsIgnoreCase("x"))&&(!cs.equalsIgnoreCase("+"))&&(!cs.equalsIgnoreCase(Character.toString((char)150)))){
                 sub=sub+c;
             }
              else
@@ -631,7 +631,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
         for(int i=s.length()-1;i>=0;i--){
             char c=s.charAt(i);
 			String cs=Character.toString(c);
-            if((!cs.equalsIgnoreCase("÷"))&&(!cs.equalsIgnoreCase("/"))&&(!cs.equalsIgnoreCase("x"))&&(!cs.equalsIgnoreCase("+"))&&(!cs.equalsIgnoreCase("−"))){
+            if((!cs.equalsIgnoreCase(Character.toString((char)(247))))&&(!cs.equalsIgnoreCase("/"))&&(!cs.equalsIgnoreCase("x"))&&(!cs.equalsIgnoreCase("+"))&&(!cs.equalsIgnoreCase(Character.toString((char)150)))){
                 flag=i;
             }
             else
@@ -709,6 +709,9 @@ public class MyCalculator2 extends javax.swing.JFrame {
                 + jTextField2 + ", lock=" + lock + ", swclear=" + swclear + "]";
     }
 }
+
+    
+
 
     
 
