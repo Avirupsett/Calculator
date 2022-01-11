@@ -12,7 +12,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
         this.setTitle("Calculator");
     }
 
-  
+    String minus_symbol;
     private void initComponents() {
 
         jLabel3 = new javax.swing.JLabel();
@@ -42,8 +42,14 @@ public class MyCalculator2 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
+        if((System.getProperty("os.name")).equalsIgnoreCase("Linux")){
+                minus_symbol="–";
+            }
+            else{
+               minus_symbol=Character.toString((char)150);
+            }
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("./img/c6039f55f3ac67bf863bb7740480cb58 (1).jpg")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(this.getClass().getResource("/img/c6039f55f3ac67bf863bb7740480cb58 (1).jpg"))); // NOI18N
         jLabel3.setText("jLabel3");
         jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -51,7 +57,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("./img/c6039f55f3ac67bf863bb7740480cb58 (6).jpg")); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(this.getClass().getResource("/img/c6039f55f3ac67bf863bb7740480cb58 (6).jpg"))); // NOI18N
         jLabel4.setText(" "+Character.toString((char)(247))+" ");
         jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -59,7 +65,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("./img/c6039f55f3ac67bf863bb7740480cb58 (26).jpg")); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(this.getClass().getResource("/img/c6039f55f3ac67bf863bb7740480cb58 (26).jpg"))); // NOI18N
         jLabel5.setText("+/-");
         jLabel5.setToolTipText("");
         jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -68,15 +74,15 @@ public class MyCalculator2 extends javax.swing.JFrame {
             }
         });
 
-        jLabel6.setIcon(new javax.swing.ImageIcon("./img/c6039f55f3ac67bf863bb7740480cb58 (3).jpg")); // NOI18N
-        jLabel6.setText("% ");
+        jLabel6.setIcon(new javax.swing.ImageIcon(this.getClass().getResource("/img/c6039f55f3ac67bf863bb7740480cb58 (3).jpg"))); // NOI18N
+        jLabel6.setText("%");
         jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel6MouseClicked(evt);
             }
         });
 
-        jLabel7.setIcon(new javax.swing.ImageIcon("./img/c6039f55f3ac67bf863bb7740480cb58 (10).jpg")); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(this.getClass().getResource("/img/c6039f55f3ac67bf863bb7740480cb58 (10).jpg"))); // NOI18N
         jLabel7.setText(" x ");
         jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -84,7 +90,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
             }
         });
 
-        jLabel8.setIcon(new javax.swing.ImageIcon("./img/c6039f55f3ac67bf863bb7740480cb58 (9).jpg")); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(this.getClass().getResource("/img/c6039f55f3ac67bf863bb7740480cb58 (9).jpg"))); // NOI18N
         jLabel8.setText("9");
         jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -92,7 +98,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
             }
         });
 
-        jLabel9.setIcon(new javax.swing.ImageIcon("./img/c6039f55f3ac67bf863bb7740480cb58 (8).jpg")); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon(this.getClass().getResource("/img/c6039f55f3ac67bf863bb7740480cb58 (8).jpg"))); // NOI18N
         jLabel9.setText("8");
         jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -100,7 +106,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
             }
         });
 
-        jLabel10.setIcon(new javax.swing.ImageIcon("./img/c6039f55f3ac67bf863bb7740480cb58 (7).jpg")); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon(this.getClass().getResource("/img/c6039f55f3ac67bf863bb7740480cb58 (7).jpg"))); // NOI18N
         jLabel10.setText("7");
         jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -108,7 +114,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
             }
         });
 
-        jLabel11.setIcon(new javax.swing.ImageIcon("./img/c6039f55f3ac67bf863bb7740480cb58 (14).jpg")); // NOI18N
+        jLabel11.setIcon(new javax.swing.ImageIcon(this.getClass().getResource("/img/c6039f55f3ac67bf863bb7740480cb58 (14).jpg"))); // NOI18N
         jLabel11.setText("4");
         jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -116,7 +122,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
             }
         });
 
-        jLabel12.setIcon(new javax.swing.ImageIcon("./img/c6039f55f3ac67bf863bb7740480cb58 (13).jpg")); // NOI18N
+        jLabel12.setIcon(new javax.swing.ImageIcon(this.getClass().getResource("/img/c6039f55f3ac67bf863bb7740480cb58 (13).jpg"))); // NOI18N
         jLabel12.setText("5");
         jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -124,7 +130,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
             }
         });
 
-        jLabel13.setIcon(new javax.swing.ImageIcon("./img/c6039f55f3ac67bf863bb7740480cb58 (12).jpg")); // NOI18N
+        jLabel13.setIcon(new javax.swing.ImageIcon(this.getClass().getResource("/img/c6039f55f3ac67bf863bb7740480cb58 (12).jpg"))); // NOI18N
         jLabel13.setText("6");
         jLabel13.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -132,15 +138,15 @@ public class MyCalculator2 extends javax.swing.JFrame {
             }
         });
 
-        jLabel14.setIcon(new javax.swing.ImageIcon("./img/c6039f55f3ac67bf863bb7740480cb58 (11).jpg")); // NOI18N
-        jLabel14.setText(" "+Character.toString((char)150));
+        jLabel14.setIcon(new javax.swing.ImageIcon(this.getClass().getResource("/img/c6039f55f3ac67bf863bb7740480cb58 (11).jpg"))); // NOI18N
+        jLabel14.setText(" "+minus_symbol+" ");
         jLabel14.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel14MouseClicked(evt);
             }
         });
 
-        jLabel15.setIcon(new javax.swing.ImageIcon("./img/c6039f55f3ac67bf863bb7740480cb58 (20).jpg")); // NOI18N
+        jLabel15.setIcon(new javax.swing.ImageIcon(this.getClass().getResource("/img/c6039f55f3ac67bf863bb7740480cb58 (20).jpg"))); // NOI18N
         jLabel15.setText("1");
         jLabel15.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -148,7 +154,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
             }
         });
 
-        jLabel16.setIcon(new javax.swing.ImageIcon("./img/c6039f55f3ac67bf863bb7740480cb58 (19).jpg")); // NOI18N
+        jLabel16.setIcon(new javax.swing.ImageIcon(this.getClass().getResource("/img/c6039f55f3ac67bf863bb7740480cb58 (19).jpg"))); // NOI18N
         jLabel16.setText("2");
         jLabel16.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -156,7 +162,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
             }
         });
 
-        jLabel17.setIcon(new javax.swing.ImageIcon("./img/c6039f55f3ac67bf863bb7740480cb58 (18).jpg")); // NOI18N
+        jLabel17.setIcon(new javax.swing.ImageIcon(this.getClass().getResource("/img/c6039f55f3ac67bf863bb7740480cb58 (18).jpg"))); // NOI18N
         jLabel17.setText("3");
         jLabel17.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -164,7 +170,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
             }
         });
 
-        jLabel18.setIcon(new javax.swing.ImageIcon("./img/c6039f55f3ac67bf863bb7740480cb58 (17).jpg")); // NOI18N
+        jLabel18.setIcon(new javax.swing.ImageIcon(this.getClass().getResource("/img/c6039f55f3ac67bf863bb7740480cb58 (17).jpg"))); // NOI18N
         jLabel18.setText(" + ");
         jLabel18.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -172,7 +178,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
             }
         });
 
-        jLabel19.setIcon(new javax.swing.ImageIcon("./img/c6039f55f3ac67bf863bb7740480cb58 (25).jpg")); // NOI18N
+        jLabel19.setIcon(new javax.swing.ImageIcon(this.getClass().getResource("/img/c6039f55f3ac67bf863bb7740480cb58 (25).jpg"))); // NOI18N
         jLabel19.setText("0");
         jLabel19.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -180,7 +186,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
             }
         });
 
-        jLabel20.setIcon(new javax.swing.ImageIcon("./img/c6039f55f3ac67bf863bb7740480cb58 (24).jpg")); // NOI18N
+        jLabel20.setIcon(new javax.swing.ImageIcon(this.getClass().getResource("/img/c6039f55f3ac67bf863bb7740480cb58 (24).jpg"))); // NOI18N
         jLabel20.setText(".");
         jLabel20.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -188,7 +194,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
             }
         });
 
-        jLabel21.setIcon(new javax.swing.ImageIcon("./img/c6039f55f3ac67bf863bb7740480cb58 (22).jpg")); // NOI18N
+        jLabel21.setIcon(new javax.swing.ImageIcon(this.getClass().getResource("/img/c6039f55f3ac67bf863bb7740480cb58 (22).jpg"))); // NOI18N
         jLabel21.setText("jLabel3");
         jLabel21.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -196,7 +202,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
             }
         });
 
-        jLabel22.setIcon(new javax.swing.ImageIcon("./img/c6039f55f3ac67bf863bb7740480cb58 (21).jpg")); // NOI18N
+        jLabel22.setIcon(new javax.swing.ImageIcon(this.getClass().getResource("/img/c6039f55f3ac67bf863bb7740480cb58 (21).jpg"))); // NOI18N
         jLabel22.setText("=");
         jLabel22.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -343,6 +349,8 @@ public class MyCalculator2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private int lock=0;
+    //String minus_symbol=Character.toString((char)150);
+    
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
        jTextField2.setText("");
        jTextField1.setText("");
@@ -417,13 +425,14 @@ public class MyCalculator2 extends javax.swing.JFrame {
 
     private void jLabel21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel21MouseClicked
         String all_cal= jTextField2.getText();
+      
         if(all_cal.length()!=0){
         String del=all_cal.substring(0, all_cal.length()-1);
-        jTextField2.setText(del);
+        jTextField2.setText(del.trim());
         }
         else{
-        String del=(jTextField1.getText()).substring(0, (jTextField1.getText()).length()-1);
-        jTextField1.setText(del); 
+        String del=(jTextField1.getText()).substring(0, ((jTextField1.getText()).trim()).length()-1);
+        jTextField1.setText(del.trim()); 
         }
         lock=0;
     }//GEN-LAST:event_jLabel21MouseClicked
@@ -442,7 +451,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
         }
         else{
             String typed = jTextField1.getText();
-            jTextField1.setText((typed.substring(0, typed.length()-2)).concat(" + "));
+            jTextField1.setText((typed.substring(0, typed.length()-2)).concat("+ "));
         }
     }//GEN-LAST:event_jLabel18MouseClicked
 
@@ -460,7 +469,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
         }
         else{
             String typed = jTextField1.getText();
-            jTextField1.setText((typed.substring(0, typed.length()-2)).concat(" "+Character.toString((char)150)+" "));
+            jTextField1.setText((typed.substring(0, typed.length()-2)).concat(minus_symbol+" "));
         }
     }//GEN-LAST:event_jLabel14MouseClicked
 
@@ -478,7 +487,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
         }
         else{
             String typed = jTextField1.getText();
-            jTextField1.setText((typed.substring(0, typed.length()-2)).concat(" x "));
+            jTextField1.setText((typed.substring(0, typed.length()-2)).concat("x "));
         }
     }//GEN-LAST:event_jLabel7MouseClicked
 
@@ -496,7 +505,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
         }
         else{
             String typed = jTextField1.getText();
-            jTextField1.setText((typed.substring(0, typed.length()-2)).concat(" "+Character.toString((char)247)+" "));
+            jTextField1.setText((typed.substring(0, typed.length()-2)).concat(Character.toString((char)247)+" "));
         }
     }//GEN-LAST:event_jLabel4MouseClicked
     private double ans=0.0;private int swclear=0;
@@ -504,10 +513,10 @@ public class MyCalculator2 extends javax.swing.JFrame {
         String fs=jTextField1.getText()+jTextField2.getText();
         jTextField2.setText("");
         swclear=1;
-        char ch=fs.charAt(fs.length()-1);
+        char ch=fs.charAt(fs.length()-2);
 		String cs2=Character.toString(ch);
-        if(cs2.equalsIgnoreCase(Character.toString((char)247))||cs2.equalsIgnoreCase("x")||cs2.equalsIgnoreCase("+")||cs2.equalsIgnoreCase(Character.toString((char)150))){
-            fs=fs.substring(0,fs.length()-1);
+        if(cs2.equalsIgnoreCase(Character.toString((char)247))||cs2.equalsIgnoreCase("x")||cs2.equalsIgnoreCase("+")||cs2.equalsIgnoreCase(minus_symbol)){
+            fs=fs.substring(0,fs.length()-2);
             jTextField1.setText("fs");
         }
         String s=fs;
@@ -561,7 +570,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
           for(int i=0;i<fs.length();i++){
         char c=fs.charAt(i);
 		String cs=Character.toString(c);
-         if(cs.equalsIgnoreCase(Character.toString((char)150))){
+         if(cs.equalsIgnoreCase(minus_symbol)){
             int lindex=findex(fs.substring(0,i))+(fposition(fs.substring(0,i))).length()+(lposition(fs.substring(i+1))).length()+1;
             ans=Double.valueOf(fposition(fs.substring(0,i)))-Double.valueOf(lposition(fs.substring(i+1)));
             System.out.println(String.format("%,.4f", ans));
@@ -569,13 +578,13 @@ public class MyCalculator2 extends javax.swing.JFrame {
             System.out.println(fs);
         }
        }
-          if(ans==(int)ans && s.length()<=25)
+          if(ans==(int)ans && s.length()<=31)
           jTextField1.setText(s+"\n\n\nANS:"+ (int)ans);
-          else if(ans!=(int)ans && s.length()<=25)
+          else if(ans!=(int)ans && s.length()<=31)
           jTextField1.setText(s+"\n\n\nANS:"+ans);
-          else if(ans==(int)ans && s.length()>25)
+          else if(ans==(int)ans && s.length()>31)
           jTextField1.setText(s+"\n\nANS:"+ (int)ans);
-          else if(ans!=(int)ans && s.length()>25)
+          else if(ans!=(int)ans && s.length()>31)
           jTextField1.setText(s+"\n\nANS:"+ans);
         }
         catch(Exception e){
@@ -599,7 +608,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
         for(int i=s.length()-1;i>=0;i--){
             char c=s.charAt(i);
 			String cs=Character.toString(c);
-            if((!cs.equalsIgnoreCase(Character.toString((char)(247))))&&(!cs.equalsIgnoreCase("x"))&&(!cs.equalsIgnoreCase("+"))&&(!cs.equalsIgnoreCase(Character.toString((char)150)))){
+            if((!cs.equalsIgnoreCase(Character.toString((char)(247))))&&(!cs.equalsIgnoreCase("x"))&&(!cs.equalsIgnoreCase("+"))&&(!cs.equalsIgnoreCase(minus_symbol))){
                 sub=c+sub;
             }
             else
@@ -615,7 +624,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
         for(int i=0;i<s.length();i++){
             char c=s.charAt(i);
 			String cs=Character.toString(c);
-            if((!cs.equalsIgnoreCase(Character.toString((char)(247))))&&(!cs.equalsIgnoreCase("x"))&&(!cs.equalsIgnoreCase("+"))&&(!cs.equalsIgnoreCase(Character.toString((char)150)))){
+            if((!cs.equalsIgnoreCase(Character.toString((char)(247))))&&(!cs.equalsIgnoreCase("x"))&&(!cs.equalsIgnoreCase("+"))&&(!cs.equalsIgnoreCase(minus_symbol))){
                 sub=sub+c;
             }
              else
@@ -631,7 +640,7 @@ public class MyCalculator2 extends javax.swing.JFrame {
         for(int i=s.length()-1;i>=0;i--){
             char c=s.charAt(i);
 			String cs=Character.toString(c);
-            if((!cs.equalsIgnoreCase(Character.toString((char)(247))))&&(!cs.equalsIgnoreCase("/"))&&(!cs.equalsIgnoreCase("x"))&&(!cs.equalsIgnoreCase("+"))&&(!cs.equalsIgnoreCase(Character.toString((char)150)))){
+            if((!cs.equalsIgnoreCase(Character.toString((char)(247))))&&(!cs.equalsIgnoreCase("/"))&&(!cs.equalsIgnoreCase("x"))&&(!cs.equalsIgnoreCase("+"))&&(!cs.equalsIgnoreCase(minus_symbol))){
                 flag=i;
             }
             else
@@ -709,9 +718,6 @@ public class MyCalculator2 extends javax.swing.JFrame {
                 + jTextField2 + ", lock=" + lock + ", swclear=" + swclear + "]";
     }
 }
-
-    
-
 
     
 
